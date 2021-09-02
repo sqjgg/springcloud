@@ -1,0 +1,5 @@
+com\jg\springcloud\entities\CommonResult.class
+com\jg\springcloud\entities\Payment.class
+com\jg\springcloud\config\RestTemplateConfig.class
+com\jg\springcloud\controller\OrderController.class
+com\jg\springcloud\OrderMain80.class

@@ -1,0 +1,28 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-order-consumer
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+ribbon:
+  #建立连接所用到的时间
+  ReadTimeout:  5000
+  #建立连接后从服务端拿取资源的时间
+  ConnectTimeout: 5000
+
+#Feign日志打印
+logging:
+  level:
+    #指定日志打印监控的包
+    com.jg.springcloud.service: debug
+
+#开启openfegin对hystrix的支持
+feign:
+  hystrix:
+    enabled: true #如果处理自身的容错就开启。开启方式与生产端不一样。
+
